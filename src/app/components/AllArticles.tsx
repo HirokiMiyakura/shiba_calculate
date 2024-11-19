@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useArticles } from '../hooks/useArticles';
 import Link from 'next/link';
 
@@ -20,10 +21,13 @@ export default function AllArticles() {
 				>
 					<div className="mx-auto mb-14 block max-w-screen-xl rounded-xl bg-white shadow sm:flex">
 						<div className="relative h-48 w-full sm:w-2/5 sm:pe-8">
-							<img
-								className="h-48 w-full rounded-t-xl object-cover sm:rounded-bl-xl sm:rounded-tr-none"
-								src="hero1.jpg"
-								alt=""
+							<Image
+								src={article.eyecatch?.url}
+								alt={article.title}
+								layout="responsive"
+								width={1000}
+								height={400}
+								className="h-48 w-full max-h-full rounded-t-xl object-cover sm:rounded-bl-xl sm:rounded-tr-none"
 							/>
 						</div>
 						<div className="p-5 sm:pt-7">
