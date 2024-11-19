@@ -3,16 +3,16 @@ import { Header } from '@/app/components/Header';
 import { client } from '@/libs/client';
 import Image from 'next/image';
 
+interface PageProps {
+	params: { id: string };
+}
+
 async function fetchArticle(id: string) {
 	const article = await client.get({ endpoint: 'blogs', contentId: id });
 	return article;
 }
 
-export default async function ArticlePage({
-	params,
-}: {
-	params: { id: string };
-}) {
+export default async function ArticlePage({ params }: PageProps) {
 	const article = await fetchArticle(params.id);
 
 	return (
