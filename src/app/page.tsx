@@ -7,6 +7,7 @@ import LatestArticles from './components/LatestArticles';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { MainLeft } from './components/MainLeft';
+import Link from 'next/link';
 
 export default function Home() {
 	return (
@@ -171,9 +172,12 @@ export default function Home() {
 						</article>
 						<div className="my-10 sm:my-20">
 							<p className="text-white text-center bg-green-600 hover:bg-green-700 w-full sm:w-1/2 mx-auto">
-								<a className="text-1xl font-extrabold py-4 block" href="/blogs">
+								<Link
+									className="text-1xl font-extrabold py-4 block"
+									href="/blogs"
+								>
 									記事一覧へ
-								</a>
+								</Link>
 							</p>
 						</div>
 					</div>
