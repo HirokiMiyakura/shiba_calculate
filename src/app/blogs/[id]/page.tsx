@@ -1,6 +1,7 @@
 import { Footer } from '@/app/components/Footer';
 import { Header } from '@/app/components/Header';
 import { client } from '@/libs/client';
+import Image from 'next/image';
 
 async function fetchArticle(id: string) {
 	const article = await client.get({ endpoint: 'blogs', contentId: id });
@@ -23,9 +24,11 @@ export default async function ArticlePage({
 					<p className="text-gray-600 mb-4">
 						{new Date(article.publishedAt).toLocaleDateString()}
 					</p>
-					<img
-						src={article.eyecatch?.url}
+					<Image
+						src={article.eyecatch?.url || '/placeholder.jpg'} // URLがない場合の代替画像を指定
 						alt={article.title}
+						width={1000} // 幅を明示的に指定
+						height={400} // 高さを明示的に指定
 						className="w-full h-60 object-cover rounded-md my-20"
 					/>
 					<div
