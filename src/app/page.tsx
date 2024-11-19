@@ -1,101 +1,286 @@
-import Image from "next/image";
+import Image from 'next/image';
+import EstimateForm from './components/EstimateForm';
+import { faqs } from './data/faqs';
+import FaqItem from './components/FaqItem';
+import ContactForm from './components/ContactForm';
+import LatestArticles from './components/LatestArticles';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { MainLeft } from './components/MainLeft';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+	return (
+		<>
+			<Header />
+			<main>
+				<section className="relative bg-green-50 py-7 sm:py-14 hero">
+					<div className="block sm:flex justify-between items-center max-w-screen-xl mx-auto hero-inner p-4 sm:p-0">
+						<div>
+							<MainLeft />
+						</div>
+						<div>
+							<EstimateForm />
+						</div>
+					</div>
+				</section>
+				<section id="ABOUT" className="bg-gray-50 my-7 sm:my-14 py-7 sm:py-14">
+					<div className="block sm:flex justify-between items-center max-w-screen-xl mx-auto p-4 sm:p-0">
+						<div className="hidden sm:block">
+							<Image
+								src="/1.jpg"
+								width={1000}
+								height={1000}
+								alt="われわれについて"
+								className="rounded-lg"
+							/>
+						</div>
+						<div className="sm:p-10">
+							<h2 className="text-3xl sm:text-4xl font-extrabold mb-7 sm:mb-14 text-center sm:text-left">
+								我々について
+							</h2>
+							<Image
+								src="/1_sp.jpg"
+								width={1000}
+								height={1000}
+								alt="われわれについて"
+								className="sm:hidden rounded-lg mb-7 h-48 sm:h-auto object-fit"
+							/>
+							<p className="leading-loose">
+								私たちは、人工芝の貼り付け工事を行う専門会社です。
+								<br />
+								この業界では、ネットで提示される見積額と実際の請求額が異なるケースが少なくありません。そうした不透明なやり方に疑問を感じ、もっと正直で誠実なサービスを提供したいという思いから、このサービスを立ち上げました。
+								<br />
+								私たちの使命は、お客様が安心してご利用いただけるサービスを提供することです。オンライン見積もりで提示した金額をそのまま最終請求額に反映させることで、信頼性と透明性を重視しています。
+								<br />
+								人工芝を通じて、お客様の生活をより快適に、より美しくするお手伝いをする。それが私たちの誇りです。
+							</p>
+						</div>
+					</div>
+				</section>
+				<section id="FLOW" className="my-7 sm:my-14 py-7 sm:py-14">
+					<div className="max-w-screen-xl mx-auto">
+						<h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-7 sm:mb-14">
+							サービスの流れ
+						</h2>
+						<div className="block sm:flex justify-between items-center max-w-screen-xl mx-auto p-4 sm:p-0">
+							<div className="">
+								<h3 className="font-extrabold text-center mb-4">
+									1. 本サイトで見積もりを確認
+								</h3>
+								<p className="mb-4">
+									<Image
+										src="/f1.jpg"
+										width={1000}
+										height={1000}
+										alt="われわれについて"
+										className="rounded-lg h-48 sm:h-auto"
+									/>
+								</p>
+								<p className="leading-loose">
+									まずはページ右上の簡単お見積もりフォームからお庭の状況をご入力下さい。
+								</p>
+							</div>
+							<div className="text-1xl sm:text-2xl font-extrabold text-center mx-4 py-4 sm:py-0">
+								<p className="text-green-600 rotate-90 sm:rotate-0">→</p>
+							</div>
+							<div className="">
+								<h3 className="font-extrabold text-center mb-4">2. 現地調査</h3>
+								<p className="mb-4">
+									<Image
+										src="/f2.jpg"
+										width={1000}
+										height={1000}
+										alt="われわれについて"
+										className="rounded-lg h-48 sm:h-auto"
+									/>
+								</p>
+								<p className="leading-loose">
+									「その他の状態」を確認するため一度現地調査をさせていただきます。
+								</p>
+							</div>
+							<div className="text-1xl sm:text-2xl font-extrabold text-center mx-4 py-4 sm:py-0">
+								<p className="text-green-600 rotate-90 sm:rotate-0">→</p>
+							</div>
+							<div className="">
+								<h3 className="font-extrabold text-center mb-4">3. 施工開始</h3>
+								<p className="mb-4">
+									<Image
+										src="/f3.jpg"
+										width={1000}
+										height={1000}
+										alt="われわれについて"
+										className="rounded-lg h-48 sm:h-auto"
+									/>
+								</p>
+								<p className="leading-loose">
+									都合の良い施工日を決定し、後日施工を開始させていただきます。
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section
+					id="SAMPLES"
+					className="bg-green-50 my-7 sm:my-14 py-7 sm:py-24"
+				>
+					<div className="max-w-screen-xl mx-auto p-4 sm:p-0">
+						<h2 className="text-3xl sm:text-4xl font-extrabold mb-7 sm:mb-14 text-center sm:text-left">
+							施工事例
+						</h2>
+						<p className="leading-loose mb-4 text-center sm:text-left">
+							施工イメージはこちら。
+						</p>
+						<div className="block sm:flex justify-between items-center mb-7">
+							<div className="w-[calc(100%)] sm:w-[calc(50%-14px)] relative sm:h-[300px]">
+								<p className="absolute top-0 left-0 px-7 py-4 bg-gray-500 text-white rounded-tl-lg">
+									Before
+								</p>
+								<Image
+									src="/before1.jpg"
+									width={1000}
+									height={1000}
+									alt="われわれについて"
+									className="rounded-lg object-cover h-48 sm:h-auto max-h-full"
+								/>
+							</div>
+							<div className="text-1xl sm:text-2xl font-extrabold text-center mx-4 py-4 sm:py-0">
+								<p className="rotate-90 sm:rotate-0">→</p>
+							</div>
+							<div className="w-[calc(100%)] sm:w-[calc(50%-14px)] relative sm:h-[300px]">
+								<p className="absolute top-0 left-0 px-7 py-4 bg-green-600 text-white rounded-tl-lg">
+									After
+								</p>
+								<Image
+									src="/after_1.jpg"
+									width={1000}
+									height={1000}
+									alt="われわれについて"
+									className="rounded-lg object-cover h-48 sm:h-auto max-h-full"
+								/>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="NEWS" className="my-7 sm:my-14 py-7 sm:py-14">
+					<div className="max-w-screen-xl mx-auto p-4 sm:p-0">
+						<h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-7 sm:mb-14">
+							新着記事
+						</h2>
+						<article>
+							<LatestArticles />
+						</article>
+						<div className="my-10 sm:my-20">
+							<p className="text-white text-center bg-green-600 hover:bg-green-700 w-full sm:w-1/2 mx-auto">
+								<a className="text-1xl font-extrabold py-4 block" href="/blogs">
+									記事一覧へ
+								</a>
+							</p>
+						</div>
+					</div>
+				</section>
+				<section id="VOICE" className="my-7 sm:my-14 py-7 sm:py-14">
+					<div className="max-w-screen-xl mx-auto">
+						<h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-7 sm:mb-14">
+							お客様の声
+						</h2>
+						<div className="block sm:flex justify-between items-top max-w-screen-xl mx-auto">
+							<div className="px-4 sm:px-10 py-7 sm:py-10 bg-gray-50 w-full sm:w-1/3">
+								<h3 className="font-extrabold text-center mb-4">
+									子どもが安心して遊べる庭に！
+								</h3>
+								<p className="mb-4 text-center mx-auto">
+									{/* <img src="./v1.jpg" className="h-64 rounded-full p-7" /> */}
+									<Image
+										src="/v1.jpg"
+										width={1000}
+										height={1000}
+										alt="われわれについて"
+										className="rounded-lg h-48 sm:h-auto"
+									/>
+								</p>
+								<p className="leading-loose">
+									庭が雑草だらけで子どもが遊ぶのをためらっていましたが、人工芝を敷いてからは安心して遊ばせられるようになりました。ふかふかで柔らかいので転んでも怪我の心配が少なく、子どもたちも大喜びです。お見積もりの通りで追加費用がかからなかったのも安心ポイントでした！
+									<br />
+									<span className="text-gray-900 text-sm font-extrabold">
+										（東京都 T様・ファミリー世帯）
+									</span>
+								</p>
+							</div>
+							<div className="px-4 sm:px-10 py-7 sm:py-10 bg-gray-100 w-full sm:w-1/3">
+								<h3 className="font-extrabold text-center mb-4">
+									手入れが不要で毎日快適！
+								</h3>
+								<p className="mb-4 text-center mx-auto">
+									{/* <img src="./v2.jpg" className="h-64 rounded-full p-7" /> */}
+									<Image
+										src="/v2.jpg"
+										width={400}
+										height={400}
+										alt="われわれについて"
+										className="rounded-lg h-48 sm:h-auto"
+									/>
+								</p>
+								<p className="leading-loose">
+									以前は芝生の手入れが本当に大変で、夏は雑草取りに追われていました。でも、人工芝に変えてからは草刈りの手間が一切なくなり、いつも綺麗な庭をキープできています。見積もり時の説明も丁寧で安心してお願いすることができました。
+									<br />
+									<span className="text-gray-900 text-sm font-extrabold">
+										（神奈川県 K様・シニア世帯）
+									</span>
+								</p>
+							</div>
+							<div className="px-4 sm:px-10 py-7 sm:py-10 bg-gray-50 w-full sm:w-1/3">
+								<h3 className="font-extrabold text-center mb-4">
+									家全体の印象が明るく！
+								</h3>
+								<p className="mb-4 text-center mx-auto">
+									{/* <img src="./v3.jpg" className="h-64 rounded-full p-7" /> */}
+									<Image
+										src="/v3.jpg"
+										width={400}
+										height={400}
+										alt="われわれについて"
+										className="rounded-lg h-48 sm:h-auto"
+									/>
+								</p>
+								<p className="leading-loose">
+									家の前庭を人工芝にしたところ、見た目がとても明るくおしゃれになりました。ご近所の方からも『素敵な庭になりましたね』と褒められることが増えました。追加料金もなくスムーズに施工していただき、本当に感謝しています。
+									<br />
+									<span className="text-gray-900 text-sm font-extrabold">
+										（大阪府 Y様・夫婦世帯）
+									</span>
+								</p>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="FAQ" className="bg-green-50 my-7 sm:my-14 py-7 sm:py-24">
+					<div className="max-w-screen-md mx-auto p-4 sm:p-0">
+						<h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-7 sm:mb-14">
+							よくあるご質問
+						</h2>
+						<div className="max-w-full mx-auto">
+							<div className="space-y-6">
+								{faqs.map((faq, index) => (
+									<FaqItem
+										key={index}
+										question={faq.question}
+										answer={faq.answer}
+									/>
+								))}
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="CONTACT" className="my-7 sm:my-14 py-7 sm:py-14">
+					<div className="max-w-screen-md mx-auto p-4 sm:p-0">
+						<h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-7 sm:mb-14">
+							お問い合わせ
+						</h2>
+						<ContactForm />
+					</div>
+				</section>
+			</main>
+			<Footer />
+		</>
+	);
 }
