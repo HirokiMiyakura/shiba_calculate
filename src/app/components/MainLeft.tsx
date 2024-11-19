@@ -2,13 +2,13 @@ export const MainLeft = () => {
 	return (
 		<>
 			<ul className="flex gap-x-4">
-				<li className="tracking-widest text-xs sm:text-md text-white font-medium px-4 sm:px-7 py-3 bg-orange-600 mb-7">
+				<li className="tracking-widest text-xs sm:text-lg text-white font-medium px-4 sm:px-7 py-3 bg-orange-600 mb-7">
 					関東圏対応
 				</li>
-				<li className="tracking-widest text-xs sm:text-md text-white font-medium px-4 sm:px-7 py-3 bg-orange-600 mb-7">
+				<li className="tracking-widest text-xs sm:text-lg text-white font-medium px-4 sm:px-7 py-3 bg-orange-600 mb-7">
 					即日対応可
 				</li>
-				<li className="tracking-widest text-xs sm:text-md text-white font-medium px-4 sm:px-7 py-3 bg-orange-600 mb-7">
+				<li className="tracking-widest text-xs sm:text-lg text-white font-medium px-4 sm:px-7 py-3 bg-orange-600 mb-7">
 					見積り無料
 				</li>
 			</ul>

@@ -1,0 +1,97 @@
+/* ハンバーガーメニューのボタン */
+.hamburger {
+	position: relative;
+	width: 30px;
+	height: 24px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	right: 21px;
+}
+
+@media (min-width: 1024px) {
+	.hamburger {
+		display: none;
+	}
+}
+
+.line {
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background-color: black;
+	transition: all 0.3s ease-in-out;
+}
+
+.line::before,
+.line::after {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 3px;
+	background-color: black;
+	transition: all 0.3s ease-in-out;
+}
+
+.line::before {
+	top: -8px;
+}
+
+.line::after {
+	bottom: -8px;
+}
+
+/* クロスに変化するアニメーション */
+.open {
+	background-color: transparent;
+}
+
+.open::before {
+	transform: rotate(45deg) translate(5px, 5px);
+}
+
+.open::after {
+	transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* フルスクリーンオーバーレイ */
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	/* background-color: rgba(0, 0, 0, 0.9); */
+	background-color: rgba(22, 163, 74, 0.97);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 1000;
+	animation: fadeIn 0.5s ease-in-out;
+}
+
+/* 閉じるボタン */
+.closeButton {
+	position: absolute;
+	top: 13px;
+	right: 10px;
+	font-size: 2rem;
+	color: white;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+/* フェードインアニメーション */
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}

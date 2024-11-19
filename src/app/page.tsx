@@ -12,9 +12,9 @@ export default function Home() {
 	return (
 		<>
 			<Header />
-			<main>
+			<main className="mt-[calc(80px)] sm:mt-0">
 				<section className="relative bg-green-50 py-7 sm:py-14 hero">
-					<div className="block sm:flex justify-between items-center max-w-screen-xl mx-auto hero-inner p-4 sm:p-0">
+					<div className="block sm:flex justify-between items-center max-w-screen-xl mx-auto hero-inner p-5 sm:p-0">
 						<div>
 							<MainLeft />
 						</div>
@@ -24,7 +24,7 @@ export default function Home() {
 					</div>
 				</section>
 				<section id="ABOUT" className="bg-gray-50 my-7 sm:my-14 py-7 sm:py-14">
-					<div className="block sm:flex justify-between items-center max-w-screen-xl mx-auto p-4 sm:p-0">
+					<div className="block sm:flex justify-between items-center max-w-screen-xl mx-auto p-5 sm:p-0">
 						<div className="hidden sm:block">
 							<Image
 								src="/1.jpg"
@@ -62,7 +62,7 @@ export default function Home() {
 						<h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-7 sm:mb-14">
 							サービスの流れ
 						</h2>
-						<div className="block sm:flex justify-between items-center max-w-screen-xl mx-auto p-4 sm:p-0">
+						<div className="block sm:flex justify-between items-center max-w-screen-xl mx-auto p-5 sm:p-0">
 							<div className="">
 								<h3 className="font-extrabold text-center mb-4">
 									1. 本サイトで見積もりを確認
@@ -80,7 +80,7 @@ export default function Home() {
 									まずはページ右上の簡単お見積もりフォームからお庭の状況をご入力下さい。
 								</p>
 							</div>
-							<div className="text-1xl sm:text-2xl font-extrabold text-center mx-4 py-4 sm:py-0">
+							<div className="text-1xl sm:text-2xl font-extrabold text-center mx-4 py-5 sm:py-0">
 								<p className="text-green-600 rotate-90 sm:rotate-0">→</p>
 							</div>
 							<div className="">
@@ -98,7 +98,7 @@ export default function Home() {
 									「その他の状態」を確認するため一度現地調査をさせていただきます。
 								</p>
 							</div>
-							<div className="text-1xl sm:text-2xl font-extrabold text-center mx-4 py-4 sm:py-0">
+							<div className="text-1xl sm:text-2xl font-extrabold text-center mx-4 py-5 sm:py-0">
 								<p className="text-green-600 rotate-90 sm:rotate-0">→</p>
 							</div>
 							<div className="">
@@ -123,7 +123,7 @@ export default function Home() {
 					id="SAMPLES"
 					className="bg-green-50 my-7 sm:my-14 py-7 sm:py-24"
 				>
-					<div className="max-w-screen-xl mx-auto p-4 sm:p-0">
+					<div className="max-w-screen-xl mx-auto p-5 sm:p-0">
 						<h2 className="text-3xl sm:text-4xl font-extrabold mb-7 sm:mb-14 text-center sm:text-left">
 							施工事例
 						</h2>
@@ -162,7 +162,7 @@ export default function Home() {
 					</div>
 				</section>
 				<section id="NEWS" className="my-7 sm:my-14 py-7 sm:py-14">
-					<div className="max-w-screen-xl mx-auto p-4 sm:p-0">
+					<div className="max-w-screen-xl mx-auto p-5 sm:p-0">
 						<h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-7 sm:mb-14">
 							新着記事
 						</h2>
@@ -184,7 +184,7 @@ export default function Home() {
 							お客様の声
 						</h2>
 						<div className="block sm:flex justify-between items-top max-w-screen-xl mx-auto">
-							<div className="px-4 sm:px-10 py-7 sm:py-10 bg-gray-50 w-full sm:w-1/3">
+							<div className="px-5 sm:px-10 py-7 sm:py-10 bg-gray-50 w-full sm:w-1/3">
 								<h3 className="font-extrabold text-center mb-4">
 									子どもが安心して遊べる庭に！
 								</h3>
@@ -206,7 +206,7 @@ export default function Home() {
 									</span>
 								</p>
 							</div>
-							<div className="px-4 sm:px-10 py-7 sm:py-10 bg-gray-100 w-full sm:w-1/3">
+							<div className="px-5 sm:px-10 py-7 sm:py-10 bg-gray-100 w-full sm:w-1/3">
 								<h3 className="font-extrabold text-center mb-4">
 									手入れが不要で毎日快適！
 								</h3>
@@ -228,7 +228,7 @@ export default function Home() {
 									</span>
 								</p>
 							</div>
-							<div className="px-4 sm:px-10 py-7 sm:py-10 bg-gray-50 w-full sm:w-1/3">
+							<div className="px-5 sm:px-10 py-7 sm:py-10 bg-gray-50 w-full sm:w-1/3">
 								<h3 className="font-extrabold text-center mb-4">
 									家全体の印象が明るく！
 								</h3>
@@ -254,7 +254,7 @@ export default function Home() {
 					</div>
 				</section>
 				<section id="FAQ" className="bg-green-50 my-7 sm:my-14 py-7 sm:py-24">
-					<div className="max-w-screen-md mx-auto p-4 sm:p-0">
+					<div className="max-w-screen-md mx-auto p-5 sm:p-0">
 						<h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-7 sm:mb-14">
 							よくあるご質問
 						</h2>
@@ -272,7 +272,7 @@ export default function Home() {
 					</div>
 				</section>
 				<section id="CONTACT" className="my-7 sm:my-14 py-7 sm:py-14">
-					<div className="max-w-screen-md mx-auto p-4 sm:p-0">
+					<div className="max-w-screen-md mx-auto p-5 sm:p-0">
 						<h2 className="text-3xl sm:text-4xl font-extrabold text-center mb-7 sm:mb-14">
 							お問い合わせ
 						</h2>
