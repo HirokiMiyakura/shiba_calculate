@@ -1,36 +1,46 @@
-'use client';
-
+// hooks/useBlogs.ts
 import { client } from '@/libs/client';
-import { useEffect, useState } from 'react';
 
-interface Article {
+type Blog = {
 	id: string;
 	title: string;
+	eyecatch: { url: string };
 	content: string;
 	publishedAt: string;
-	eyecatch: { url: string };
+};
+
+// 記事一覧を取得する関数
+export async function fetchBlogs(): Promise<Blog[]> {
+	try {
+		const data = await client.get({ endpoint: 'blogs' });
+		return data.contents as Blog[];
+	} catch (error) {
+		console.error('Failed to fetch blogs:', error);
+		return [];
+	}
 }
 
-export function useArticles() {
-	const [articles, setArticles] = useState<Article[]>([]);
-	const [isLoading, setIsLoading] = useState(true);
-	const [error, setError] = useState<Error | null>(null);
+// 最新記事3件を取得する関数
+export async function fetchLatestBlogs(): Promise<Blog[]> {
+	try {
+		const data = await client.get({ endpoint: 'blogs', queries: { limit: 3 } });
+		return data.contents as Blog[];
+	} catch (error) {
+		console.error('Failed to fetch blogs:', error);
+		return [];
+	}
+}
 
-	useEffect(() => {
-		async function fetchArticles() {
-			try {
-				setIsLoading(true);
-				const data = await client.get({ endpoint: 'blogs' });
-				setArticles(data.contents);
-			} catch (err) {
-				setError(err as Error);
-			} finally {
-				setIsLoading(false);
-			}
-		}
-
-		fetchArticles();
-	}, []);
-
-	return { articles, isLoading, error };
+// 個別記事を取得する関数
+export async function fetchBlog(id: string): Promise<Blog | null> {
+	try {
+		const blog = await client.get({
+			endpoint: 'blogs',
+			contentId: id,
+		});
+		return blog as Blog;
+	} catch (error) {
+		console.error('Failed to fetch blog post:', error);
+		return null;
+	}
 }

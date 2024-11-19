@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { Noto_Sans_JP } from 'next/font/google';
 import './globals.css';
+import { Footer } from '@/app/components/Footer';
+import { Header } from '@/app/components/Header';
 
 // Googleフォント設定
 const notoSansJP = Noto_Sans_JP({
@@ -24,7 +26,12 @@ export default function RootLayout({
 		// 	<body className="antialiased">{children}</body>
 		// </html>
 		<html lang="en">
-			<body className={notoSansJP.className}>{children}</body>
+			<body className={notoSansJP.className}>
+				<Header />
+				{/* <main className="my-14 py-14"> */}
+				<main className="mt-[calc(80px)] sm:mt-0">{children}</main>
+				<Footer />
+			</body>
 		</html>
 	);
 }
