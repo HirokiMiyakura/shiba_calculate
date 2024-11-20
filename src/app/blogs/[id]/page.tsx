@@ -29,7 +29,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
 					className="w-full h-60 object-cover rounded-md my-20"
 				/>
 				<div
-					className="prose"
+					className="prose leading-loose"
 					dangerouslySetInnerHTML={{ __html: blog.content }}
 				/>
 			</div>
