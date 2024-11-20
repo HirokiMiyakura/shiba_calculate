@@ -63,7 +63,7 @@ export const Header = () => {
 						<li>
 							<Link
 								className="tracking-wider py-7 block hover:opacity-85"
-								href="#ABOUT"
+								href="/#ABOUT"
 							>
 								緑の達人とは
 							</Link>
@@ -71,7 +71,7 @@ export const Header = () => {
 						<li>
 							<Link
 								className="tracking-wider py-7 block hover:opacity-85"
-								href="#FLOW"
+								href="/#FLOW"
 							>
 								サービスの流れ
 							</Link>
@@ -79,7 +79,7 @@ export const Header = () => {
 						<li>
 							<Link
 								className="tracking-wider py-7 block hover:opacity-85"
-								href="#SAMPLES"
+								href="/#SAMPLES"
 							>
 								施工事例
 							</Link>
@@ -87,7 +87,7 @@ export const Header = () => {
 						<li>
 							<Link
 								className="tracking-wider py-7 block hover:opacity-85"
-								href="#NEWS"
+								href="/#NEWS"
 							>
 								新着記事
 							</Link>
@@ -95,7 +95,7 @@ export const Header = () => {
 						<li>
 							<Link
 								className="tracking-wider py-7 block hover:opacity-85"
-								href="#VOICE"
+								href="/#VOICE"
 							>
 								お客様の声
 							</Link>
@@ -103,7 +103,7 @@ export const Header = () => {
 						<li>
 							<Link
 								className="tracking-wider py-7 block hover:opacity-85"
-								href="#FAQ"
+								href="/#FAQ"
 							>
 								よくあるご質問
 							</Link>
@@ -113,7 +113,7 @@ export const Header = () => {
 								<li className="bg-yellow-500">
 									<Link
 										className="tracking-widest px-10 py-7 block hover:opacity-85"
-										href="#ESTIMATE"
+										href="/#ESTIMATE"
 									>
 										簡単お見積り
 									</Link>
@@ -121,7 +121,7 @@ export const Header = () => {
 								<li className="bg-orange-600">
 									<Link
 										className="tracking-widest px-10 py-7 block hover:opacity-85"
-										href="#CONTACT"
+										href="/#CONTACT"
 									>
 										お問い合わせ
 									</Link>

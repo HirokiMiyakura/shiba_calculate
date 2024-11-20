@@ -40,6 +40,8 @@ const EstimateForm: React.FC = () => {
 		setIsEstimateVisible(true);
 	};
 
+	console.log(inputArea);
+
 	return (
 		<div className="min-w-full sm:min-w-[400px] max-w-xl p-4 sm:p-8 bg-gray-50 opacity-95 rounded-xl mt-7 sm:mt-0">
 			<h2
@@ -89,7 +91,6 @@ const EstimateForm: React.FC = () => {
 						<option value="栃木">栃木</option>
 					</select>
 				</div>
-
 				{/* 芝生の種類の選択（縦組） */}
 				<div>
 					<label className="block text-sm font-medium text-gray-700 mb-2 sm:mb-4">
@@ -131,7 +132,6 @@ const EstimateForm: React.FC = () => {
 						</label>
 					</div>
 				</div>
-
 				{/* 雑草の状態（複数選択可） */}
 				<div>
 					<label className="block text-sm font-medium text-gray-700 mb-2 sm:mb-4">
@@ -158,7 +158,6 @@ const EstimateForm: React.FC = () => {
 						</label>
 					</div>
 				</div>
-
 				{/* 見積もりを計算ボタン */}
 				<button
 					type="submit"
@@ -172,7 +171,6 @@ const EstimateForm: React.FC = () => {
 					見積もりを計算
 				</button>
 			</form>
-
 			{/* 見積もり結果の表示 */}
 			{isEstimateVisible && estimate && (
 				<div className="mt-8 p-6 bg-gray-50 rounded-md shadow-inner">

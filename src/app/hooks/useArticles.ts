@@ -1,4 +1,3 @@
-// hooks/useBlogs.ts
 import { client } from '@/libs/client';
 
 type Blog = {

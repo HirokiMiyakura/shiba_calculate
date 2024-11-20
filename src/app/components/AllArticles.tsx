@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import { fetchBlogs } from '../hooks/useArticles';
 import Link from 'next/link';

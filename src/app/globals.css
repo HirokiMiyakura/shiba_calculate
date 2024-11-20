@@ -21,7 +21,7 @@ body {
 }
 
 .hero {
-	background: url('/hero1.jpg') no-repeat top right;
+	background: url('/hero1_lighten.jpg') no-repeat top right;
 	background-size: cover;
 }
 

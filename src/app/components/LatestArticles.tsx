@@ -1,12 +1,9 @@
-'use client';
-
 import Image from 'next/image';
 import { fetchLatestBlogs } from '../hooks/useArticles';
 import Link from 'next/link';
 
 export default async function LatestArticles() {
 	const blogs = await fetchLatestBlogs();
-	// console.log(blogs);
 
 	return (
 		<div>
@@ -18,8 +15,6 @@ export default async function LatestArticles() {
 								src={blog.eyecatch?.url}
 								alt={blog.title}
 								fill
-								// width={1000}
-								// height={400}
 								className="h-48 w-full max-h-full rounded-t-xl object-cover sm:rounded-bl-xl sm:rounded-tr-none"
 							/>
 						</div>
