@@ -40,7 +40,7 @@ export default function Home() {
 							width={1000}
 							height={1000}
 							alt="われわれについて"
-							className="sm:hidden rounded-lg mb-7 h-48 sm:h-auto object-fit"
+							className="sm:hidden rounded-lg mb-7 h-48 sm:h-auto  object-cover"
 						/>
 						<p className="leading-loose">
 							私たちは、人工芝の貼り付け工事を行う専門会社です。
@@ -70,7 +70,7 @@ export default function Home() {
 									width={1000}
 									height={1000}
 									alt="われわれについて"
-									className="rounded-lg h-48 sm:h-auto"
+									className="rounded-lg h-48 sm:h-auto object-cover"
 								/>
 							</p>
 							<p className="leading-loose">
@@ -88,7 +88,7 @@ export default function Home() {
 									width={1000}
 									height={1000}
 									alt="われわれについて"
-									className="rounded-lg h-48 sm:h-auto"
+									className="rounded-lg h-48 sm:h-auto object-cover"
 								/>
 							</p>
 							<p className="leading-loose">
@@ -106,7 +106,7 @@ export default function Home() {
 									width={1000}
 									height={1000}
 									alt="われわれについて"
-									className="rounded-lg h-48 sm:h-auto"
+									className="rounded-lg h-48 sm:h-auto object-cover"
 								/>
 							</p>
 							<p className="leading-loose">
@@ -192,7 +192,7 @@ export default function Home() {
 									width={1000}
 									height={1000}
 									alt="われわれについて"
-									className="rounded-lg h-48 sm:h-auto"
+									className="rounded-lg h-48 sm:h-auto object-cover"
 								/>
 							</p>
 							<p className="leading-loose">
@@ -211,10 +211,10 @@ export default function Home() {
 								{/* <img src="./v2.jpg" className="h-64 rounded-full p-7" /> */}
 								<Image
 									src="/v2.jpg"
-									width={400}
-									height={400}
+									width={1000}
+									height={1000}
 									alt="われわれについて"
-									className="rounded-lg h-48 sm:h-auto"
+									className="rounded-lg h-48 sm:h-auto object-cover"
 								/>
 							</p>
 							<p className="leading-loose">
@@ -233,10 +233,10 @@ export default function Home() {
 								{/* <img src="./v3.jpg" className="h-64 rounded-full p-7" /> */}
 								<Image
 									src="/v3.jpg"
-									width={400}
-									height={400}
+									width={1000}
+									height={1000}
 									alt="われわれについて"
-									className="rounded-lg h-48 sm:h-auto"
+									className="rounded-lg h-48 sm:h-auto object-cover"
 								/>
 							</p>
 							<p className="leading-loose">
