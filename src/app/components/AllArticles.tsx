@@ -17,7 +17,7 @@ export default async function AllArticles() {
 							<Image
 								src={blog.eyecatch?.url}
 								alt={blog.title}
-								layout="responsive"
+								fill
 								width={1000}
 								height={400}
 								className="h-48 w-full max-h-full rounded-t-xl object-cover sm:rounded-bl-xl sm:rounded-tr-none"
